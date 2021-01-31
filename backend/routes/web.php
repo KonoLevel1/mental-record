@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+// コントローラー呼び出し
+use App\Http\Controllers\MentalRecordController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/main', [MentalRecordController::class, 'showMain']);
 Route::get('/', function () {
     return view('welcome');
 });
