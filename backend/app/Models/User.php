@@ -58,4 +58,12 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+    * レコードテーブルとのリレーション設定
+    */
+    public function records()
+    {
+        return $this->hasMany(Record::class);
+    }
 }
